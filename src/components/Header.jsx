@@ -17,7 +17,7 @@ export default function Header({ search, setSearch, onFilterOpen, isDark, toggle
           />
         </div>
         <button className="filter-btn" onClick={onFilterOpen}>
-          <img src="/images/filter_icon.png" alt="filter" />
+          <img src="images/filter_icon.png" alt="filter" />
         </button>
       </div>
     </header>

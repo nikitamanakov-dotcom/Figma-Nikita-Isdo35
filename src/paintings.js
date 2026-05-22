@@ -5,7 +5,7 @@ export const paintings = [
     year: 1761, 
     artist: "Giovanni Battista Piranesi", 
     location: "Tivoli", 
-    image: "/images/1.jpg" 
+    image: "images/1.jpg" // <-- Было "/images/1.jpg", убрали слэш в начале
   },
   { 
     id: 2, 
@@ -13,7 +13,7 @@ export const paintings = [
     year: 1888, 
     artist: "Vincent van Gogh", 
     location: "Paris", 
-    image: "/images/2.png" 
+    image: "images/2.png" 
   },
   { 
     id: 3, 
@@ -21,7 +21,7 @@ export const paintings = [
     year: 1862, 
     artist: "Vasily Pukirev", 
     location: "Moscow", 
-    image: "/images/3.png" 
+    image: "images/3.png" 
   },
   { 
     id: 4, 
@@ -29,7 +29,7 @@ export const paintings = [
     year: 1624, 
     artist: "Gerard van Honthorst", 
     location: "Amsterdam", 
-    image: "/images/4.png" 
+    image: "images/4.png" 
   },
   { 
     id: 5, 
@@ -37,7 +37,7 @@ export const paintings = [
     year: 1834, 
     artist: "Thomas Cole", 
     location: "New York", 
-    image: "/images/5.jpg" 
+    image: "images/5.jpg" 
   },
   { 
     id: 6, 
@@ -45,6 +45,6 @@ export const paintings = [
     year: 1845, 
     artist: "Anton Sminck van Pitloo", 
     location: "Naples", 
-    image: "/images/6.jpg" 
+    image: "images/6.jpg" 
   },
 ];
