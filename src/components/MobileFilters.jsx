@@ -13,6 +13,7 @@ export default function MobileFilters({ onClose, filters, setFilters, onClear })
         </div>
 
         <div className="mobile-filters">
+          {/* Без атрибута open — фильтры будут закрыты */}
           <details className="filter-group-mobile">
             <summary>ARTIST <span className="toggle-icon"></span></summary>
             <select 

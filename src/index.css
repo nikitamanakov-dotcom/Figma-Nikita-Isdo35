@@ -103,6 +103,7 @@ body {
     overflow: hidden;
 }
 
+/* Эффект приближения картинки */
 .card-inner {
     overflow: hidden;
     border-radius: 2px;
@@ -124,24 +125,22 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 75%; /* Блок, который резервирует место под стрелку */
+    width: 75%;
     background: var(--card-bg);
+    padding: 15px 0 10px 0;
     transition: var(--transition);
     z-index: 2;
-}
-
-.content-flex-wrapper {
+    
+    /* Флекс для выравнивания текста и стрелочки на одной линии */
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* Растягивает элементы на всю высоту */
-    width: 100%;
+    align-items: center;
 }
 
 .text-container {
     flex: 1;
     overflow: hidden;
     position: relative;
-    padding: 15px 0 10px 0;
 }
 
 .text-wrapper {
@@ -166,6 +165,7 @@ body {
     pointer-events: none;
 }
 
+/* Анимация при наведении на всю КАРТОЧКУ */
 .card:hover .state-default { 
     opacity: 0; 
     transform: translateY(20px); 
@@ -205,16 +205,17 @@ body {
     text-transform: uppercase;
 }
 
-/* Обновленная стрелочка, которая будет показана всегда на нужном месте */
+/* Стили для стрелочки (на десктопе скрыта, на мобильных встает в правый бок) */
 .mobile-arrow {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    width: 32px;
+    width: 35px;
+    height: 50px;
     background: var(--accent-color);
     color: #ffffff;
-    flex-shrink: 0;
     font-size: 16px;
+    flex-shrink: 0;
 }
 
 .mobile-menu-overlay {
@@ -226,6 +227,7 @@ body {
     justify-content: flex-end;
 }
 
+/* Анимация выезда мобильного меню */
 .mobile-menu {
     width: 350px;
     height: 100%;
@@ -353,18 +355,22 @@ body {
     font-size: 16px;
 }
 
+/* Адаптивные медиа-запросы */
 @media (max-width: 900px) {
     .grid { grid-template-columns: 1fr 1fr; }
     .card-content { width: 85%; }
+    .mobile-arrow { display: flex; } /* Показываем стрелку */
 }
      
 @media (max-width: 768px) {
     .card-content { width: 85%; }
     .mobile-menu { width: 75%; }
+    .mobile-arrow { display: flex; } /* Показываем стрелку */
 }
 
 @media (max-width: 320px) {
     .grid { grid-template-columns: 1fr; }
     .search-wrapper { width: 100%; }
     .mobile-menu { width: 90%; }
+    .mobile-arrow { display: flex; } /* Показываем стрелку */
 }
