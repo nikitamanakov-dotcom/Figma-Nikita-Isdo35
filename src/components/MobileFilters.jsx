@@ -1,8 +1,10 @@
 import React from 'react';
+import { paintings } from '../paintings.js';
 
 export default function MobileFilters({ onClose, filters, setFilters, onClear }) {
-  const artists = ["Giovanni Battista Piranesi", "Vincent van Gogh", "Vasily Pukirev", "Gerard van Honthorst", "Thomas Cole", "Anton Sminck van Pitloo"];
-  const locations = ["Tivoli", "Paris", "Moscow", "Amsterdam", "New York", "Naples"];
+  // Динамически получаем уникальных художников и локации из базы данных
+  const artists = [...new Set(paintings.map(p => p.artist))].sort();
+  const locations = [...new Set(paintings.map(p => p.location))].sort();
 
   return (
     <div className="mobile-menu-overlay" onClick={onClose}>
@@ -55,7 +57,7 @@ export default function MobileFilters({ onClose, filters, setFilters, onClear })
 
         <div className="mobile-menu-actions">
           <button className="btn-primary-mobile" onClick={onClose}>SHOW RESULTS</button>
-          <button className="btn-secondary-mobile" onClick={onClear}>CLEAR</button>
+          <button className="btn-secondary-mobile" onClick={() => { onClear(); onClose(); }}>CLEAR</button>
         </div>
       </div>
     </div>

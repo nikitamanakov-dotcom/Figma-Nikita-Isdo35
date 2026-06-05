@@ -1,50 +1,22 @@
 export const paintings = [
-  { 
-    id: 1, 
-    title: "CASCATE DI TIVOLI", 
-    year: 1761, 
-    artist: "Giovanni Battista Piranesi", 
-    location: "Tivoli", 
-    image: "images/1.jpg" // <-- Было "/images/1.jpg", убрали слэш в начале
-  },
-  { 
-    id: 2, 
-    title: "PORTRAIT OF VAN GOGH", 
-    year: 1888, 
-    artist: "Vincent van Gogh", 
-    location: "Paris", 
-    image: "images/2.png" 
-  },
-  { 
-    id: 3, 
-    title: "UNEQUAL MARRIAGE", 
-    year: 1862, 
-    artist: "Vasily Pukirev", 
-    location: "Moscow", 
-    image: "images/3.png" 
-  },
-  { 
-    id: 4, 
-    title: "THE HAPPY VIOLINIST", 
-    year: 1624, 
-    artist: "Gerard van Honthorst", 
-    location: "Amsterdam", 
-    image: "images/4.png" 
-  },
-  { 
-    id: 5, 
-    title: "THE ARCADIAN", 
-    year: 1834, 
-    artist: "Thomas Cole", 
-    location: "New York", 
-    image: "images/5.jpg" 
-  },
-  { 
-    id: 6, 
-    title: "GOLFO DI NAPOLI", 
-    year: 1845, 
-    artist: "Anton Sminck van Pitloo", 
-    location: "Naples", 
-    image: "images/6.jpg" 
-  },
+  { id: 1, title: "CASCATE DI TIVOLI", year: 1761, artist: "Giovanni Battista Piranesi", location: "Tivoli", image: "images/1.jpg" },
+  { id: 2, title: "PORTRAIT OF VAN GOGH", year: 1888, artist: "Vincent van Gogh", location: "Paris", image: "images/2.png" },
+  { id: 3, title: "UNEQUAL MARRIAGE", year: 1862, artist: "Vasily Pukirev", location: "Moscow", image: "images/3.png" },
+  { id: 4, title: "THE HAPPY VIOLINIST", year: 1624, artist: "Gerard van Honthorst", location: "Amsterdam", image: "images/4.png" },
+  { id: 5, title: "THE ARCADIAN", year: 1834, artist: "Thomas Cole", location: "New York", image: "images/5.jpg" },
+  { id: 6, title: "GOLFO DI NAPOLI", year: 1845, artist: "Anton Sminck van Pitloo", location: "Naples", image: "images/6.jpg" },
+  { id: 7, title: "STARRY NIGHT", year: 1889, artist: "Vincent van Gogh", location: "New York", image: "images/7.jpg" },
+  { id: 8, title: "THE NIGHT WATCH", year: 1642, artist: "Rembrandt", location: "Amsterdam", image: "images/8.jpg" },
+  { id: 9, title: "GIRL WITH A PEARL EARRING", year: 1665, artist: "Johannes Vermeer", location: "The Hague", image: "images/9.jpg" },
+  { id: 10, title: "THE KISS", year: 1908, artist: "Gustav Klimt", location: "Vienna", image: "images/10.jpg" },
+  { id: 11, title: "MORNING IN A PINE FOREST", year: 1889, artist: "Ivan Shishkin", location: "Moscow", image: "images/11.jpg" },
+  { id: 12, title: "THE NINTH WAVE", year: 1850, artist: "Ivan Aivazovsky", location: "St. Petersburg", image: "images/12.jpg" },
+  { id: 13, title: "IMPRESSION, SUNRISE", year: 1872, artist: "Claude Monet", location: "Paris", image: "images/13.jpg" },
+  { id: 14, title: "THE PERSISTENCE OF MEMORY", year: 1931, artist: "Salvador Dalí", location: "New York", image: "images/14.jpg" },
+  { id: 15, title: "THE SCREAM", year: 1893, artist: "Edvard Munch", location: "Oslo", image: "images/15.jpg" },
+  { id: 16, title: "GUERNICA", year: 1937, artist: "Pablo Picasso", location: "Madrid", image: "images/16.jpg" },
+  { id: 17, title: "WANDERER ABOVE THE SEA OF FOG", year: 1818, artist: "Caspar David Friedrich", location: "Hamburg", image: "images/17.jpg" },
+  { id: 18, title: "THE BIRTH OF VENUS", year: 1486, artist: "Sandro Botticelli", location: "Florence", image: "images/18.jpg" },
+  { id: 19, title: "MONA LISA", year: 1503, artist: "Leonardo da Vinci", location: "Paris", image: "images/19.jpg" },
+  { id: 20, title: "CAFÉ TERRACE AT NIGHT", year: 1888, artist: "Vincent van Gogh", location: "Otterlo", image: "images/20.jpg" }
 ];
