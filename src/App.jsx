@@ -13,21 +13,18 @@ function App() {
   const [showFilters, setShowFilters] = useState(false);
   const [isDark, setIsDark] = useState(false);
   
-  // Пагинация
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6; // Количество карточек на страницу
+  const itemsPerPage = 6;
 
   const toggleTheme = () => {
     setIsDark(!isDark);
     document.body.classList.toggle('dark-theme');
   };
 
-  // Сбрасываем на 1 страницу при любом изменении поиска или фильтров
   useEffect(() => {
     setCurrentPage(1);
   }, [search, filters]);
 
-  // Единая логика фильтрации и поиска
   const filteredPaintings = useMemo(() => {
     return paintings.filter(p => {
       const matchSearch = p.title.toLowerCase().includes(search.toLowerCase());
@@ -40,7 +37,6 @@ function App() {
     });
   }, [search, filters]);
 
-  // Вычисляем данные для текущей страницы
   const totalPages = Math.ceil(filteredPaintings.length / itemsPerPage);
   const currentPaintings = filteredPaintings.slice(
     (currentPage - 1) * itemsPerPage, 
@@ -52,7 +48,6 @@ function App() {
     setSearch('');
   };
 
-  // Генерация номеров страниц
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
@@ -65,7 +60,6 @@ function App() {
         toggleTheme={toggleTheme}
       />
 
-      {/* Передаем в Gallery только те картины, которые нужно показать на текущей странице */}
       <Gallery paintings={currentPaintings} />
 
       {totalPages > 1 && (

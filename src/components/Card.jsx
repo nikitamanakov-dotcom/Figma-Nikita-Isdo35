@@ -20,6 +20,8 @@ export default function Card({ painting }) {
               </div>
             </div>
           </div>
+          {/* Эта стрелочка теперь всегда в разметке */}
+          <div className="mobile-arrow">→</div>
         </div>
       </div>
     </div>

@@ -103,7 +103,6 @@ body {
     overflow: hidden;
 }
 
-/* Эффект приближения картинки */
 .card-inner {
     overflow: hidden;
     border-radius: 2px;
@@ -125,9 +124,8 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 75%;
+    width: 75%; /* Блок, который резервирует место под стрелку */
     background: var(--card-bg);
-    padding: 15px 0 10px 0;
     transition: var(--transition);
     z-index: 2;
 }
@@ -135,7 +133,7 @@ body {
 .content-flex-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch; /* Растягивает элементы на всю высоту */
     width: 100%;
 }
 
@@ -143,6 +141,7 @@ body {
     flex: 1;
     overflow: hidden;
     position: relative;
+    padding: 15px 0 10px 0;
 }
 
 .text-wrapper {
@@ -167,7 +166,6 @@ body {
     pointer-events: none;
 }
 
-/* Анимация при наведении на всю КАРТОЧКУ, а не только на текст */
 .card:hover .state-default { 
     opacity: 0; 
     transform: translateY(20px); 
@@ -207,17 +205,16 @@ body {
     text-transform: uppercase;
 }
 
+/* Обновленная стрелочка, которая будет показана всегда на нужном месте */
 .mobile-arrow {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
+    width: 32px;
     background: var(--accent-color);
     color: #ffffff;
+    flex-shrink: 0;
+    font-size: 16px;
 }
 
 .mobile-menu-overlay {
@@ -229,7 +226,6 @@ body {
     justify-content: flex-end;
 }
 
-/* Анимация выезда мобильного меню */
 .mobile-menu {
     width: 350px;
     height: 100%;
@@ -359,12 +355,10 @@ body {
 
 @media (max-width: 900px) {
     .grid { grid-template-columns: 1fr 1fr; }
-    .mobile-arrow { display: flex; }
     .card-content { width: 85%; }
 }
      
 @media (max-width: 768px) {
-    .mobile-arrow { display: flex; }
     .card-content { width: 85%; }
     .mobile-menu { width: 75%; }
 }

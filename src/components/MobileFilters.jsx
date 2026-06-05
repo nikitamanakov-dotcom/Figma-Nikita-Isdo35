@@ -2,7 +2,6 @@ import React from 'react';
 import { paintings } from '../paintings.js';
 
 export default function MobileFilters({ onClose, filters, setFilters, onClear }) {
-  // Динамически получаем уникальных художников и локации из базы данных
   const artists = [...new Set(paintings.map(p => p.artist))].sort();
   const locations = [...new Set(paintings.map(p => p.location))].sort();
 
@@ -14,7 +13,7 @@ export default function MobileFilters({ onClose, filters, setFilters, onClear })
         </div>
 
         <div className="mobile-filters">
-          <details className="filter-group-mobile" open>
+          <details className="filter-group-mobile">
             <summary>ARTIST <span className="toggle-icon"></span></summary>
             <select 
               className="custom-select-mobile"
@@ -26,7 +25,7 @@ export default function MobileFilters({ onClose, filters, setFilters, onClear })
             </select>
           </details>
 
-          <details className="filter-group-mobile" open>
+          <details className="filter-group-mobile">
             <summary>LOCATION <span className="toggle-icon"></span></summary>
             <select 
               className="custom-select-mobile"
@@ -38,7 +37,7 @@ export default function MobileFilters({ onClose, filters, setFilters, onClear })
             </select>
           </details>
 
-          <details className="filter-group-mobile" open>
+          <details className="filter-group-mobile">
             <summary>YEARS <span className="toggle-icon"></span></summary>
             <div className="years-inputs-mobile">
               <input 
